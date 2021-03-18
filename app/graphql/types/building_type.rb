@@ -17,7 +17,7 @@ module Types
     #   We need to create our associations below as well as nested queries
 
 
-    field :intervention, [FactInterventionsType], null: true
+    field :intervention, [FactInterventionType], null: true
     def interventions
       object.fact_intervention.all
     end

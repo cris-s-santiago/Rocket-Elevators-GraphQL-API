@@ -47,7 +47,7 @@ module Types
       Employee.all
     end
 
-    field :fact_intervention, [FactInterventionsType], null: false,
+    field :fact_intervention, [FactInterventionType], null: false,
     description: "For the fact intervention queries"
     def fact_intervention
       FactIntervention.all
