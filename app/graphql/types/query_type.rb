@@ -50,7 +50,7 @@ module Types
     field :fact_intervention, [FactInterventionsType], null: false,
     description: "For the fact intervention queries"
     def fact_intervention
-      FactInterventions.all
+      FactIntervention.all
     end
 
   end
