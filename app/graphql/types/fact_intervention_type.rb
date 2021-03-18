@@ -12,9 +12,9 @@ module Types
     field :report, String, null: true
     field :status, String, null: true
 
-    #  join adress and get one only item
-    field :address, Types::AddressType, null:true
+#------------------ Retrieving the address of the building, the beginning and the end of the intervention for a specific intervention. ------------------#
     
+  field :address, Types::AddressType, null:true    
     def address
       buildingObject = Building.where(id: object.building_id)[0]
       Address.where(id: buildingObject.address_id)[0]
