@@ -14,8 +14,5 @@ module Types
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
     field :latitude, Float, null: true
     field :longitude, Float, null: true
-
-   #   We need to create our associations below
-
   end
 end
