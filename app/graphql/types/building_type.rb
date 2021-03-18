@@ -11,7 +11,7 @@ module Types
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
     field :customer_id, Integer, null: true
     field :address_id, Integer, null: true
-    field :fact_intervention, [FactInterventionsType], null: true
+    field :fact_intervention, [FactInterventionType], null: true
     field :building_details, BuildingDetailType, null: true
 
     #   We need to create our associations below as well as nested queries

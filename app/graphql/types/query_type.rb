@@ -52,6 +52,13 @@ module Types
     def fact_intervention
       FactIntervention.all
     end
-
+  
+    field :fact_intervention, FactInterventionType, null: false do
+      argument :id, ID, required: true
+    end
+    
+    def fact_intervention(id:)
+      FactIntervention.find(id)
+    end
   end
 end
