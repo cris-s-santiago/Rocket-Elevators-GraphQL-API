@@ -8,5 +8,10 @@ module Types
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
     field :user_id, Integer, null: true
+
+    field :fact_intervention, Types::FactInterventionType, null: true    
+    def fact_intervention   
+      FactIntervention.find_by(employee_id: object.id)   
+    end
   end
 end

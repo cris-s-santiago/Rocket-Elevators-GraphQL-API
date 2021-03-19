@@ -14,10 +14,15 @@ module Types
 
 #------------------ Retrieving the address of the building, the beginning and the end of the intervention for a specific intervention. ------------------#
     
-  field :address, Types::AddressType, null:true    
+    field :address, Types::AddressType, null:true    
     def address
       buildingObject = Building.where(id: object.building_id)[0]
       Address.where(id: buildingObject.address_id)[0]
+    end
+
+    field :building, Types::BuildingType, null:true    
+    def building
+      Building.where(id: object.building_id)[0]
     end
   end
 end
