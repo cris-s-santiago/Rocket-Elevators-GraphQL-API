@@ -2,7 +2,7 @@
 default: &default
  adapter: mysql2
  encoding: utf8
- url: <%= MYSQL_URL %>
+ url: <%= ["MYSQL_URL"] %>
  port: 3306
  socket: /var/run/mysqld/mysqld.sock
 
@@ -17,7 +17,7 @@ development:
 default: &postgresql
   adapter: postgresql
   encoding: unicode
-  url: <%= POSTGRESQL_URL %>
+  url: <%= ["POSTGRESQL_URL"] %>
 
 warehouse_production:
   <<: *postgresql
