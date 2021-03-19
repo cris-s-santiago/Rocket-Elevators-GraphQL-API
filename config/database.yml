@@ -1,12 +1,18 @@
+default: &default
+ adapter: mysql2
+ encoding: utf8
 production:
+ <<: *default
  url: <%= ["MYSQL_URL"] %>
- adapter: mysql2
 development:
+ <<: *default
  url: <%= ["MYSQL_URL"] %>
- adapter: mysql2
+postgresql: &postgresql
+  adapter: postgresql
+  encoding: unicode
 warehouse_production:
+  <<: *postgresql
   url: <%= ["POSTGRESQL_URL"] %>
-  adapter: postgresql
 warehouse_development:
+  <<: *postgresql
   url: <%= ["POSTGRESQL_URL"] %>
-  adapter: postgresql
