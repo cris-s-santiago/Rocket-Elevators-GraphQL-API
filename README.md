@@ -1,5 +1,7 @@
 # README
 
+#Problem description This exercise is from the Week 8 of the "Odyssey" program offered by CodeBoxx. This code is written in c# and ruby on rails. The task this week is about offering and Exposing a Service on the Internet using Apllication Programming Interfaces (API's).
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
