@@ -18,6 +18,10 @@ default: &postgresql
   password: Codeboxx1!
   host: codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com
 
+warehouse_production:
+  <<: *postgresql
+  database: KaelenBurroughs
+
 warehouse_development:
   <<: *postgresql
   database: KaelenBurroughs
