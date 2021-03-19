@@ -6,6 +6,7 @@ default: &default
  password: Codeboxx1!
  host: codeboxx.cq6zrczewpu2.us-east-1.rds.amazonaws.com
  port: 3306
+ socket: /var/run/mysqld/mysqld.sock
 
  production:
  <<: *default
