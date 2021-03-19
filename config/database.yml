@@ -1,27 +1,12 @@
-
-default: &default
- adapter: mysql2
- encoding: utf8
- url: <%= ["MYSQL_URL"] %>
- port: 3306
-
 production:
- <<: *default
- database: KaelenBurroughs
-
+ url: <%= ["MYSQL_URL"] %>
+ adapter: mysql2
 development:
- <<: *default
- database: KaelenBurroughs
-
-default: &postgresql
-  adapter: postgresql
-  encoding: unicode
-  url: <%= ["POSTGRESQL_URL"] %>
-
+ url: <%= ["MYSQL_URL"] %>
+ adapter: mysql2
 warehouse_production:
-  <<: *postgresql
-  database: KaelenBurroughs
-
+  url: <%= ["POSTGRESQL_URL"] %>
+  adapter: postgresql
 warehouse_development:
-  <<: *postgresql
-  database: KaelenBurroughs
+  url: <%= ["POSTGRESQL_URL"] %>
+  adapter: postgresql
