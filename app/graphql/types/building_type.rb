@@ -14,22 +14,22 @@ module Types
 
 #------------------ Retrieving customer information and the list of interventions that took place for a specific building ------------------#
     
-    field :fact_intervention, FactInterventionType, null: true    
+    field :fact_intervention, [Types::FactInterventionType], null: true    
     def fact_intervention   
-      FactIntervention.find_by(building_id: object.id)   
+      FactIntervention.where(building_id: object.id)   
     end
 
-    field :customer, CustomerType, null: true
+    field :customer, Types::CustomerType, null: true
     def customer  
-      Customer.find(object.customer_id)
+      Customer.where(id: object.customer_id)[0]
     end
 
 #------------------ Retrieval of all interventions carried out by a specified employee with the buildings associated ------------------#
-#---------------with these interventions including the details (Table BuildingDetails) associated with these buildings. ------------------#
+#--------------- with these interventions including the details (Table BuildingDetails) associated with these buildings ------------------#
     
-    field :details, BuildingDetailType, null: true
+    field :details, [Types::BuildingDetailType], null: true
     def details      
-      BuildingDetail.where(building_id: object.id)[0]     
+      BuildingDetail.where(building_id: object.id)
     end
   end
 end

@@ -9,9 +9,12 @@ module Types
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
     field :user_id, Integer, null: true
 
-    field :fact_intervention, Types::FactInterventionType, null: true    
+#------------------ Retrieval of all interventions carried out by a specified employee with the buildings associated ------------------#
+#--------------- with these interventions including the details (Table BuildingDetails) associated with these buildings ------------------#
+
+    field :fact_intervention, [Types::FactInterventionType], null: true    
     def fact_intervention   
-      FactIntervention.find_by(employee_id: object.id)   
+      FactIntervention.where(employee_id: object.id)   
     end
   end
 end
