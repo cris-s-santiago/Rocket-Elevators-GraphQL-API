@@ -19,5 +19,10 @@ module Types
       buildingObject = Building.where(id: object.building_id)[0]
       Address.where(id: buildingObject.address_id)[0]
     end
+
+    field :building, Types::BuildingType, null:true    
+    def building
+      Building.where(id: object.building_id)[0]
+    end
   end
 end
