@@ -42,4 +42,6 @@ Things you may want to cover:
 
 * Deployment instructions
 
-Contributors Kaelen Burroughs, Cristiane Santiago, Ahsan Syed Ali, Muyiwa Adetula
+Contributors
+
+Kaelen Burroughs, Cristiane Santiago, Ahsan Syed Ali, Muyiwa Adetula
