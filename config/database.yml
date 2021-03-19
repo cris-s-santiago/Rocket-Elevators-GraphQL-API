@@ -3,16 +3,16 @@ default: &default
  encoding: utf8
 production:
  <<: *default
- url: <%= ["MYSQL_URL"] %>
+ url: <%= ENV["MYSQL_URL"] %>
 development:
  <<: *default
- url: <%= ["MYSQL_URL"] %>
+ url: <%= ENV["MYSQL_URL"] %>
 postgresql: &postgresql
   adapter: postgresql
   encoding: unicode
 warehouse_production:
   <<: *postgresql
-  url: <%= ["POSTGRESQL_URL"] %>
+  url: <%= ENV["POSTGRESQL_URL"] %>
 warehouse_development:
   <<: *postgresql
-  url: <%= ["POSTGRESQL_URL"] %>
+  url: <%= ENV["POSTGRESQL_URL"] %>
