@@ -7,6 +7,10 @@ default: &default
  host: codeboxx.cq6zrczewpu2.us-east-1.rds.amazonaws.com
  port: 3306
 
+ production:
+ <<: *default
+ database: KaelenBurroughs
+
 development:
  <<: *default
  database: KaelenBurroughs
