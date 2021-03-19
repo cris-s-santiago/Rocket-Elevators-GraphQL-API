@@ -4,7 +4,6 @@ default: &default
  encoding: utf8
  url: <%= ["MYSQL_URL"] %>
  port: 3306
- socket: /var/run/mysqld/mysqld.sock
 
 production:
  <<: *default
