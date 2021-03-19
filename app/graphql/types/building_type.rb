@@ -11,18 +11,5 @@ module Types
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
     field :customer_id, Integer, null: true
     field :address_id, Integer, null: true
-
-#------------------ Retrieving customer information and the list of interventions that took place for a specific building ------------------#
-    
-  field :fact_intervention, Types::FactInterventionType, null: true    
-    def fact_intervention   
-      FactIntervention.find_by(building_id: object.id)   
-    end
-
-    field :customer, CustomerType, null: true
-    def customer  
-      Customer.find(object.customer_id)
-    end
-
   end
 end

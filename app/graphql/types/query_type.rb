@@ -27,7 +27,6 @@ module Types
     def building(id:)
       building = Building.find(id)  
     end
-    
     field :building_details, [BuildingDetailType], null: false,
     description: "For the building details' queries"
     def building_details
@@ -55,7 +54,6 @@ module Types
     field :fact_intervention, FactInterventionType, null: false do
       argument :id, ID, required: true
     end
-    
     def fact_intervention(id:)
       FactIntervention.find(id)
     end
