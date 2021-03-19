@@ -46,6 +46,13 @@ module Types
       Employee.all
     end
 
+    field :employee, EmployeeType, null: false do
+      argument :id, ID, required: true
+    end
+    def employee(id:)
+      employee = Employee.find(id)  
+    end
+
     field :fact_intervention, [FactInterventionType], null: false,
     description: "For the fact intervention queries"
     def fact_intervention
