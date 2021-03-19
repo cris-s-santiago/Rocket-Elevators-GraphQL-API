@@ -61,6 +61,8 @@ This API must be deployed on a Server in Azure and must establish a connection w
   https://www.howtographql.com/basics/2-core-concepts/
                 
   https://evilmartians.com/chronicles/graphql-on-rails-1-from-zero-to-the-first-query
+  
+  Heroku GraphQL URL: https://radiant-refuge-82544.herokuapp.co/
  
   📌 How to run the tests:
 
