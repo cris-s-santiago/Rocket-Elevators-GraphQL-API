@@ -27,8 +27,7 @@ module Types
     def building(id:)
       building = Building.find(id)  
     end
-
-
+    
     field :building_details, [BuildingDetailType], null: false,
     description: "For the building details' queries"
     def building_details
